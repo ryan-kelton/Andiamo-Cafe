@@ -1,0 +1,467 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+   Global styles reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-----------------------------------------------------------------*/
+
+/* Styles begin here */
+/* Global styles */
+:root{
+    --text: #121212;
+    --bg: #F7F7F7;
+    --action: #b33b23;
+    --error: #b33b23;
+}
+.darkStyles{
+    --text: #eaeaea;
+    --bg: #121212;
+    --action: #E38572;
+    --error: #E38572;
+}
+html{
+    width: 1280px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.25rem;
+}
+h1, h2{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-weight: 700;
+    color: var(--text);
+}
+p, li{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    color: var(--text);
+}
+a{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    color: var(--action);
+    text-decoration: none;
+}
+a:hover{
+    font-weight: 700;
+    border-bottom: 1px solid var(--action);
+}
+label{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+}
+strong{
+    font-weight: 700;
+}
+input{
+    font-size: 16px;
+}
+textarea{
+    font: 16px;
+}
+button{
+    font-size: 16px;
+}
+button:hover{
+    cursor: pointer;
+}
+/* End global styles */
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/* Header and nav */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+}
+nav p{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+nav ul{
+    flex-grow: 2;
+    justify-content: flex-end;
+    display: inline-flex;
+}
+nav li{
+    padding-left: 1.5rem;
+}
+nav a{
+    padding: .5rem;
+    color: var(--text);
+}
+
+/* Dark mode button */
+#darkMode{
+    margin-left: 30px;
+    padding: 7px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--action);
+    color: white;
+}
+/* End Header and nav */
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/* Welcome section */
+#welcome {
+    display: grid;
+    height: 400px;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(179, 59, 35, .25);
+}
+#welcomeInfo{
+    margin: 0px 25px;
+    max-width: 500px;
+    grid-column: 1;
+}
+#welcomeInfo h2{
+    font-size: 30px;
+    padding-bottom: 8px;
+}
+#welcomeInfo p{
+    padding-bottom: 12px;
+}
+
+#heroImage{
+    grid-column: 2;
+    height: 400px;
+}
+#heroImage img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+/* End welcome section */
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/* Now brewing section */
+#nowBrewing{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 15% 85%;
+    height: 500px;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(179, 59, 35, .25);
+}
+#nowBrewing h2{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/3;
+    border-bottom: 1.5px solid rgba(179, 59, 35, .25);
+    padding: 25px;
+}
+
+/* Coffee selector */
+#coffeeSelector{
+    position: relative;
+    left: 100px;
+    top: -40px;
+}
+#coffeeSelector li{
+    margin: 15px 0;
+}
+#coffeeSelector li:hover{
+    cursor: pointer;
+    color: var(--action);
+    font-weight: 700;
+}
+.active{
+    font-weight: 700;
+    color: var(--action);
+}
+.caption{
+    font-size: 14px;
+}
+
+/* Id for selected coffee */
+#selectedCoffee{
+    grid-column: 2;
+}
+.coffeeInfo{
+    position: relative;
+    left: 434px;
+    top: -275px;
+}
+.coffeeInfo ul{
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+.coffeeInfo li:first-child{
+    padding-top: 15px;
+}
+.coffeeInfo p:first-child{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+.coffeeBag img{
+    height: 500px;
+    position: relative;
+    top: 28px;
+}
+/* End now brewing section */
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/* Rewards section */
+#rewards{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 85%;
+    height: 500px;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(179, 59, 35, .25);
+}
+#rewards h2{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/3;
+    border-bottom: 1.5px solid rgba(179, 59, 35, .25);
+    padding: 25px;
+}
+
+/* "Win a free coffee!" */
+#freeCoffee{
+    grid-column: 1;
+    max-width: 400px;
+    padding: 20px;
+    position: relative;
+    left: 105px;
+}
+#freeCoffee p:first-child{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+#freeCoffee p{
+    line-height: 23px;
+}
+
+/* Input styles */
+#userGuess, #testSubmit{
+    display: block;
+    margin-top: 20px;
+    float: left;
+}
+#userGuess{
+    padding: 7px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-size: 1.25rem;
+    width: 50px;
+    border-radius: 5px;
+    border: solid var(--action) 1px;
+    margin-right: 10px;
+}
+#userGuess:focus{
+    outline: none;
+    border: 2px solid var(--action);
+}
+#testSubmit{
+    padding: 12px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    background-color: var(--action);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}
+#testSubmit:hover{
+    cursor: pointer;
+}
+
+/* Display user's result */
+#userGuessCorrect{
+    grid-column: 2;
+    text-align: center;
+    line-height: 23px;
+}
+#correctResult{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+}
+#userGuessWrong{
+    grid-column: 2;
+    text-align: center;
+}
+#wrongResult{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+}
+/* End rewards section */
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/* Begin footer and contact section */
+footer{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 500px;
+}
+#footerLogo{
+    margin: 40px 20px;
+    text-align: center;
+    font-weight: 700;
+}
+footer h2{
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+/* Form container */
+#contact{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: relative;
+    top: -89px;
+}
+.required{
+    font-size: 11px;
+    display: inline;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    padding-left: 10px;
+    opacity: 75%;
+}
+
+/* Form left */
+#formLeft{
+    grid-column: 1;
+    margin-bottom: 4rem;
+}
+#formLeft input{
+    padding: .5rem;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    border-radius: 5px;
+    border: solid gray 1px;
+    width: 200px;
+    opacity: 75%;
+}
+#formLeft input:focus{
+    outline: none;
+    opacity: 100%;
+}
+.inputStyle input{
+    display: block;
+    margin: 10px 0 5px 0;
+}
+.inputStyle{
+    margin-top: 20px;
+}
+.inputStyle:first-of-type{
+    margin-top: 0px;
+}
+
+/* User feedback */
+.errorStyles{
+    color: var(--error);
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-size: .75rem;
+    padding: 4px;
+    display: block;
+} 
+
+/* Form right */
+fieldset{
+    grid-column: 2;
+}
+fieldset p{
+    margin: 20px 0 10px 0;
+}
+fieldset input{
+    margin: 10px 5px;
+}
+fieldset input[type=submit]{
+    padding: .75rem;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    background-color: var(--action);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+legend{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+}
+textarea{
+    padding: 8px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    border-radius: 5px;
+    border: solid gray 1px;
+    width: 300px;
+    height: 150px;
+    resize: none;
+    opacity: 75%;
+}
+textarea:focus{
+    outline: none;
+    opacity: 100%;
+}
+
+/* Span styles for the submission confirmation */
+#submitConfirmation{
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    line-height: 24px;
+    width: 520px;
+    margin: 20px 0px;
+}
+/* End footer and contact section */
+/*-----------------------------------------------------------------*/
+
+/* Class used to hide html content */
+.hide{
+    display: none;
+}

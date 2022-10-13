@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Andiamo al Café</title>
+        <link href="stylesheet.css" rel="stylesheet">
+
+        <!--Links to Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+        <script src="javascript.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="hide">Andiamo al Café</h1>
+
+            <!--Begin navigation-->
+            <nav>
+                <h2 style="display: none;">Navigation</h2>
+                    <img src="../Assets/Logo.svg" alt="Andiamo al Café logo" width="100px">
+                    <p>Andiamo al Café</p>
+                <ul id="navLinks">
+                    <li><a href="#nowBrewing">Now Brewing</a></li>
+                    <li><a href="#rewards">Rewards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <!--Light/ Dark mode toggle-->
+                <button id="darkMode">Dark / Light</button>
+            </nav>
+
+        </header>
+
+        <!--Begin welcome section-->
+        <section id="welcome">
+            <div id="welcomeInfo">
+                <h2>Join us at the café.</h2>
+                <p>The heart and soul of your daily life</p>
+                <p>Located on <a href="#">Atco Ave, NJ</a>, we are a family owned and operated café. We pride ourselves on our specialty coffee and our Italian love.</p>
+            </div>
+            <div id="heroImage">
+                <img src="../Assets/ianBaldwinUnsplash.jpg" alt="A picture of a café taken by Ian Baldwin and retrieved from Unsplash.com">
+            </div>
+        </section>
+
+        <!--Begin now brewing section-->
+        <section id="nowBrewing">
+            <h2>Now Brewing</h2>
+            <ul id="coffeeSelector">
+                <li id="sunrise" class="active">Sunrise Sweetness </br> <span class="caption">Light Roast</span></li>
+                <li id="mildMonday">Mild Monday </br> <span class="caption">Medium Roast</span></li>
+                <li id="darkDaisy">Dark Daisy </br> <span class="caption">Dark Roast</span></li>
+            </ul>
+            <!--Product #1: Default-->
+            <div id="selectedCoffee">
+                <div id="product1">
+                    <div class="coffeeBag">
+                        <img src="../Assets/noBG_Sunrise_Sweetness.png" alt="A picture of the Sunrise Sweetness coffee bag">
+                    </div>  
+                    <div class="coffeeInfo">
+                        <p>Sunrise Sweetness</p>
+                        <p>Light Roast</p>
+                        <ul>
+                            <li>Origin of East Africa</li>
+                            <li>Tasting notes of citrus</li>
+                            <li>Weight of 1 lb</li>
+                        </ul>
+                    </div>
+                </div>  
+                <!--End Product #1-->
+
+                <!--Product #2-->
+                <div id="product2" class="hide">
+                    <div class="coffeeBag">
+                        <img src="../Assets/noBG_Monday_Mild.png" alt="A picture of the Monday Mild coffee bag">
+                    </div>  
+                    <div class="coffeeInfo">
+                        <p>Mild Monday</p>
+                        <p>Medium Roast</p>
+                        <ul>
+                            <li>Origin of Guatemala</li>
+                            <li>Tasting notes of coco and spice</li>
+                            <li>Weight of 1 lb</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End Product #2-->
+
+                <!--Product #3-->
+                <div id="product3" class="hide">
+                    <div class="coffeeBag">
+                        <img src="../Assets/noBG_Dark_Daisy.png" alt="A picture of the Dark Daisy coffee bag">
+                    </div>  
+                    <div class="coffeeInfo">
+                        <p>Dark Daisy</p>
+                        <p>Dark Roast</p>
+                        <ul>
+                            <li>Origin of Kenya</li>
+                            <li>Tasting notes of earth and spice</li>
+                            <li>Weight of 1 lb</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End Product #3-->
+            </div>  
+        </section>
+
+        <!--Begin rewards section-->
+        <section id="rewards">
+            <h2>Rewards</h2>
+            <div id="freeCoffee">
+                <p>Win a free coffee!</p>
+                <p>Test your luck with our "guess the number" game. If you guess the right number <strong>between 0 and 10</strong>, you win a free cup of coffee of any size.</p>
+                <input type="number" id="userGuess" name="userGuess" min="0" max="10">
+                <input type="submit" id="testSubmit" value="Test your luck">
+            </div>
+            <div id="userGuessCorrect" class="hide">
+                <img src="../Assets/coffeeCup_Cup Icon.svg" alt="A coffee cup graphic" width="200px">
+                <p><strong>You Won!</strong></p>
+                <p>Click <a href="#">here</a> to download your redeemable coupon.</p>
+                <span id="correctResult"></span>
+            </div>
+            <div id="userGuessWrong" class="hide">
+                <p><strong>Try again...</strong></p>
+                <span id="wrongResult"></span>
+            </div>
+        </section>
+
+        <!--Begin contact section-->
+        <footer>
+            <div id="footerLogo">
+                <img src="../Assets/Logo.svg" width="100px" alt="Andiamo al Café logo">
+                <p>Andiamo al Café</p>
+            </div>
+            <h2>Contact us</h2>
+            <form id="contact">
+                <div id="formLeft">
+                    <div class="inputStyle">
+                        <label for="firstName">First name:</label><span class="required">*Required</span>
+                        <input type="text" id="firstName" name="First name" required placeholder="Enter your first name">
+                        <span id="firstNameError" class="errorStyles hide"></span>
+                    </div>
+                    <div class="inputStyle">
+                        <label for="lastName">Last name:</label><span class="required">*Required</span>
+                        <input type="text" id="lastName" name="Last name" required placeholder="Enter your last name">
+                        <span id="lastNameError" class="errorStyles hide"></span>
+                    </div>
+                    <div class="inputStyle">
+                        <label for="userEmail">Email address:</label>
+                        <input type="email" id="userEmail" name="User's email address" placeholder="example@email.com">
+                        <span id="emailError" class="errorStyles hide"></span>
+                    </div>
+                    <div class="inputStyle">
+                        <label for="userPhoneNumber">Phone number:</label>
+                        <input type="tel" id="userPhoneNumber" name="User's phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="856-571-5529">
+                        <span id="phoneError" class="errorStyles hide"></span>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Contact Preference:<span class="required">*Required</span></legend>
+                    <div>
+                        <input type="radio" id="emailPref" name="User's contact preference" value="Email">
+                        <label for="emailPref">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="phonePref" name="User's contact preference" value="Phone">
+                        <label for="phonePref">Phone</label>
+                    </div>
+                    <span id="contactPrefError" class="errorStyles hide"></span>
+                    <p>Comment:<span class="required">*Required</span></p>
+                    <textarea name="comment" form="contact" id="comment" placeholder="Enter your comment here..."></textarea>
+                    <span id="commentError" class="errorStyles hide"></span>
+                    <input type="submit" value="Submit" id="formSubmit">
+                </fieldset>
+                <p id="submitConfirmation" class="hide">
+                </p>
+            </form>
+        </footer>
+    </body>
+</html>
