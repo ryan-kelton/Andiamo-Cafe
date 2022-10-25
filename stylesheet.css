@@ -110,20 +110,37 @@ button{
 button:hover{
     cursor: pointer;
 }
+.text-hidden{
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}
 /* End global styles */
 /*-----------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------*/
 /* Header and nav */
+header {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+h1{
+    font-size: 1.2rem;
+    flex-grow: 2;
+}
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 10px 0px;
-}
-nav p{
-    font-weight: 700;
-    font-size: 1.2rem;
 }
 nav ul{
     flex-grow: 2;

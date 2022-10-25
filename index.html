@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Andiamo al Café</title>
@@ -14,20 +14,18 @@
     </head>
     <body>
         <header>
-            <h1 class="hide">Andiamo al Café</h1>
-
+            <img src="./Assets/Logo.svg" alt="Andiamo al Café logo" width="100">
+            <h1>Andiamo al Café</h1>
             <!--Begin navigation-->
             <nav>
-                <h2 style="display: none;">Navigation</h2>
-                    <img src="../Assets/Logo.svg" alt="Andiamo al Café logo" width="100px">
-                    <p>Andiamo al Café</p>
+                <h2 class="text-hidden">Navigation</h2>
                 <ul id="navLinks">
                     <li><a href="#nowBrewing">Now Brewing</a></li>
                     <li><a href="#rewards">Rewards</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <!--Light/ Dark mode toggle-->
-                <button id="darkMode">Dark / Light</button>
+                <button id="darkMode">Dark &frasl; Light</button>
             </nav>
 
         </header>
@@ -35,12 +33,12 @@
         <!--Begin welcome section-->
         <section id="welcome">
             <div id="welcomeInfo">
-                <h2>Join us at the café.</h2>
+                <h2>Join us at the café</h2>
                 <p>The heart and soul of your daily life</p>
                 <p>Located on <a href="#">Atco Ave, NJ</a>, we are a family owned and operated café. We pride ourselves on our specialty coffee and our Italian love.</p>
             </div>
             <div id="heroImage">
-                <img src="../Assets/ianBaldwinUnsplash.jpg" alt="A picture of a café taken by Ian Baldwin and retrieved from Unsplash.com">
+                <img src="./Assets/ianBaldwinUnsplash.jpg" alt="cafe bar">
             </div>
         </section>
 
@@ -56,7 +54,7 @@
             <div id="selectedCoffee">
                 <div id="product1">
                     <div class="coffeeBag">
-                        <img src="../Assets/noBG_Sunrise_Sweetness.png" alt="A picture of the Sunrise Sweetness coffee bag">
+                        <img src="./Assets/noBG_Sunrise_Sweetness.png" alt="sunrise sweetness coffee bag">
                     </div>  
                     <div class="coffeeInfo">
                         <p>Sunrise Sweetness</p>
@@ -73,7 +71,7 @@
                 <!--Product #2-->
                 <div id="product2" class="hide">
                     <div class="coffeeBag">
-                        <img src="../Assets/noBG_Monday_Mild.png" alt="A picture of the Monday Mild coffee bag">
+                        <img src="./Assets/noBG_Monday_Mild.png" alt="monday mild coffee bag">
                     </div>  
                     <div class="coffeeInfo">
                         <p>Mild Monday</p>
@@ -90,7 +88,7 @@
                 <!--Product #3-->
                 <div id="product3" class="hide">
                     <div class="coffeeBag">
-                        <img src="../Assets/noBG_Dark_Daisy.png" alt="A picture of the Dark Daisy coffee bag">
+                        <img src="./Assets/noBG_Dark_Daisy.png" alt="dark daisy coffee bag">
                     </div>  
                     <div class="coffeeInfo">
                         <p>Dark Daisy</p>
@@ -116,7 +114,7 @@
                 <input type="submit" id="testSubmit" value="Test your luck">
             </div>
             <div id="userGuessCorrect" class="hide">
-                <img src="../Assets/coffeeCup_Cup Icon.svg" alt="A coffee cup graphic" width="200px">
+                <img src="./Assets/coffeeCup_Cup_Icon.svg" alt="A coffee cup graphic" width="200">
                 <p><strong>You Won!</strong></p>
                 <p>Click <a href="#">here</a> to download your redeemable coupon.</p>
                 <span id="correctResult"></span>
@@ -130,7 +128,7 @@
         <!--Begin contact section-->
         <footer>
             <div id="footerLogo">
-                <img src="../Assets/Logo.svg" width="100px" alt="Andiamo al Café logo">
+                <img src="./Assets/Logo.svg" width="100" alt="Andiamo al Café logo">
                 <p>Andiamo al Café</p>
             </div>
             <h2>Contact us</h2>
